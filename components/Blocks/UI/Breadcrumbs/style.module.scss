@@ -1,0 +1,10 @@
+.list {
+    list-style-type: none;
+
+    &Item {
+    }
+
+    &Link {
+        text-decoration: none;
+    }
+}

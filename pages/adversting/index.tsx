@@ -2,11 +2,11 @@ import type { NextPage } from 'next'
 import { GetServerSideProps } from 'next';
 import React, { FC } from 'react';
 import Head from 'next/head';
-import DefaultLayout from "../components/Layouts/DefaultLayout";
-import Section from "../components/Layouts/Section";
-import {IPage} from "../types/PageProps";
-import PageContext from '../context/PageContext';
-import TitleBlock from '../components/Blocks/TitleBlock';
+import DefaultLayout from "../../components/Layouts/DefaultLayout";
+import Section from "../../components/Layouts/Section";
+import {IPage} from "../../types/PageProps";
+import PageContext from '../../context/PageContext';
+import TitleBlock from '../../components/Blocks/TitleBlock';
 
 export interface IPropsPage {
   pageData: IPage;
@@ -27,7 +27,7 @@ const IndexPage: FC<IPropsPage> = ({ error, pageData }) => {
           <DefaultLayout error={error}>
             <Section
                 component={() => (
-                    <TitleBlock title={'Главная'} />
+                    <TitleBlock title={'Рекламный сайт'}/>
                 )}
                 noMargin
             />
@@ -44,7 +44,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
   const pageData = {
     staticContent: {
-      ...(await import(`../locales/ru/index.json`)).default,
+      ...(await import(`../../locales/ru/index.json`)).default,
     } as { [key: string]: { [key: string]: string } },
   };
 
