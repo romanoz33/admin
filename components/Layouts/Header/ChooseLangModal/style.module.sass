@@ -1,0 +1,46 @@
+@import @sassConfig
+
+
+.chooseLangModal
+	display: none
+	position: absolute
+	top: 85px
+	right: 10%
+	z-index: 99
+
+	+max-width($desktop)
+		display: flex
+	+max-width($tablet)
+		top: 37px
+		right: 8%
+	@media only screen and (max-width: 790px)
+		right: 7%
+
+	+max-width($mobile)
+		background: $lightGray
+		width: 100%
+		padding: 13px 26px
+		right: auto
+		left: 0
+		top: 60px
+
+	&Item + .chooseLangModalItem
+		margin-left: 26px
+
+		@media only screen and (max-width: 790px)
+			margin-left: 20px
+
+
+	&Link
+		display: block
+		color: #000
+		font: 500 13px/16px $font
+
+
+		&Active
+			font-weight: 800
+			text-decoration: none
+			cursor: default
+			pointer-events: none
+
+

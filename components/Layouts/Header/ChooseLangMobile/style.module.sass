@@ -1,0 +1,61 @@
+@import @sassConfig
+
+
+.chooseLangMobile
+	position: relative
+	margin-right: 30px
+	filter: invert(1)
+	+max-width($mobile)
+		width: 24px
+		height: 24px
+
+
+	&Btn
+		display: flex
+		width: 100%
+		height: 100%
+		cursor: pointer
+		transition: opacity $defaultTransition
+		+min-width($tablet)
+			display: none
+			margin-right: 20px
+
+
+		&:hover
+			opacity: $defaultOpacity
+
+
+	&List
+		position: absolute
+		top: 40px
+		left: 50%
+		transform: translateX(-50%)
+		box-shadow: 2px 3px 4px 0 $middleGray,
+
+		&Item
+			text-align: center
+
+
+			& + .chooseLangMobileItem
+				margin-top: 3px
+
+
+	&Link
+		display: block
+		padding: 5px
+		background-color: #fff
+		transition: background-color $defaultTransition
+
+
+		&Active
+			font-weight: 800
+
+
+		&:hover
+			background-color: $lightGray
+
+
+.chooseLangMobileMain
+	filter: none
+	&.headerSticky
+		filter: invert(1)
