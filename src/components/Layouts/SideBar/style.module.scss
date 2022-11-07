@@ -1,0 +1,9 @@
+.SideBar {
+  width: 250px;
+  background-color: green;
+  transition: width 0.4s;
+}
+
+.SideBarClosed {
+  width: 0px;
+}

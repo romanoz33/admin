@@ -1,0 +1,15 @@
+.SideBarHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 250px;
+  white-space: nowrap;
+  background-color: $c-header;
+  border: .5px solid grey;
+
+  &__logo {
+    color: $c-burger;
+    font-weight: 400;
+  }
+}

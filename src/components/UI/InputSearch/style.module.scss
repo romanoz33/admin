@@ -1,0 +1,50 @@
+.InputSearch {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+
+  &:focus-within {
+    &>button {
+      background-color: #af99ff;
+      outline: 2px solid #af99ff;
+      transition: outline 0.3s ease, color .3s ease;
+    }
+  }
+
+  &__input {
+    width: 170px;
+    border: none;
+    height: 35px;
+    background-color: #ffffff;
+    padding-left: 10px;
+    border-radius: 6px 0 0 6px;
+    outline: none;
+    transition: border .3s ease, color .3s ease;
+
+    &:focus {
+      outline: 2px solid #af99ff;
+      transition: outline .5s ease, color .3s ease;
+    }
+
+  }
+
+
+  &__input::placeholder {
+    color: #666;
+    padding-left: 8px;
+  }
+
+
+  &__button {
+    height: 35px;
+    width: 35px;
+    background-color: #eef4ff;
+    border-left: none;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+  }
+
+
+}

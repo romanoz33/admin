@@ -1,0 +1,27 @@
+.list {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  &Item {
+    &:not(:last-child):after {
+      content: ">";
+      margin-left: 10px;
+      cursor: pointer;
+      
+    }
+  }
+
+  &Link {
+    text-decoration: none;
+    font-size: 14px;
+    color: black;
+
+    &:hover {
+        color: blue;
+        cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+.Burger {
+  height: 20px;
+  width: 27px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.Line {
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 10px;
+  background: $c-burger;
+
+  &:nth-child(1) {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  &:nth-child(2) {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  &:nth-child(3) {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+}
+
+.BurgerOpen {
+  .Line {
+    &:nth-child(1) {
+      transform: rotate(40deg);
+    }
+
+    &:nth-child(2) {
+      transform: scaleY(0);
+    }
+
+    &:nth-child(3) {
+      transform: rotate(-40deg);
+    }
+
+  }
+}

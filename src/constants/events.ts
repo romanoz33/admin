@@ -1,0 +1,1 @@
+export const EVENT_TOGGLE_SIDEBAR = 'toggle-sidebar';

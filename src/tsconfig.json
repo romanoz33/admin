@@ -1,0 +1,50 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".",
+		"outDir": ".next",
+		"allowJs": true,
+		"alwaysStrict": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"isolatedModules": true,
+		"jsx": "preserve",
+		"lib": ["dom", "es2017"],
+		"module": "esnext",
+		"moduleResolution": "node",
+		"noFallthroughCasesInSwitch": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"resolveJsonModule": true,
+		"experimentalDecorators": true,
+		"skipLibCheck": true,
+		"strict": true,
+		"target": "esnext",
+		"paths": {
+			"components/*": ["components/*"],
+			"config/*": ["config/*"],
+			"lib/*": ["lib/*"],
+			"pages/*": ["pages/*"],
+			"store/*": ["store/*"],
+			"types/*": ["types/*"],
+			"@constants/*": ["constants/*"],
+			"@hooks/*": ["hooks/*"],
+			"@utils/*": ["utils/*"],
+			"public": ["public"],
+			"assets": ["public/assets"],
+			"images": ["public/assets/images"]
+		},
+		"noEmit": true,
+		"incremental": true
+	},
+	"exclude": ["node_modules"],
+	"include": [
+		"**/*.ts",
+		"**/*.tsx",
+		"components/base/Editor/EditorConstants.js",
+		"components/base/Editor/Editor.jsxxxx",
+		"components/base/CkEditor/CkEditor.jsx",
+		"pages/blog/[slug].js",
+		"pages/blog/create.js",
+		"store/blockSlice.ts"
+	]
+}

@@ -1,0 +1,36 @@
+@import @sassConfig
+
+
+.sectionTitle
+	position: relative
+	font: 700 52px/130% $font
+	margin: 0 0 52px 0
+	+max-width($tablet)
+		font: 700 36px/130% $font
+		margin: 0 0 32px 0
+	+max-width($mobile)
+		font: 700 28px/34px $font
+		margin: 0 0 24px 0
+
+
+	//&::before
+	//	position: absolute
+	//	display: block
+	//	background: url("/img/svg/icons/rectangles.svg") no-repeat center/contain
+	//	content: ''
+	//	z-index: -1
+	//	+min-width($tablet)
+	//		top: -14px
+	//		left: -18px
+	//		width: 71px
+	//		height: 70px
+	//	+max-width($tablet)
+	//		top: -8px
+	//		left: -12px
+	//		width: 48px
+	//		height: 48px
+	//	+max-width($mobile)
+	//		width: 40px
+	//		height: 40px
+	//		top: -6px
+	//		left: -8px
