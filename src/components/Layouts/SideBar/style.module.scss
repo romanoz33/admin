@@ -1,9 +1,10 @@
 .SideBar {
-  width: 250px;
+  width: 60px;
+  transition: width 0.4s ease;
   background-color: $c-sidebar;
-  transition: width 0.4s;
-}
 
-.SideBarClosed {
-  width: 0px;
+  &.SideBarOpen {
+    width: 250px;
+    transition: width 0.4s ease;
+  }
 }

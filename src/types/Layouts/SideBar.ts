@@ -1,3 +1,3 @@
 export interface SideBarProps {
-  title: string;
+  // title: string;
 }

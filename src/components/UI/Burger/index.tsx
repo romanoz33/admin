@@ -1,19 +1,15 @@
 import clsx from "clsx";
-import React, { useState } from "react";
-import { EVENT_TOGGLE_SIDEBAR } from "../../../constants/events";
+import React from "react";
 import cn from "./style.module.scss";
 
-const Burger = () => {
-  const [isBurgerOpen, setBurgerOpen] = useState(true);
-
+const Burger = ({ setIsOpen, isOpen }) => {
   const handleClick = () => {
-    document.dispatchEvent(new CustomEvent(EVENT_TOGGLE_SIDEBAR));
-    return setBurgerOpen(!isBurgerOpen);
+    setIsOpen(!isOpen);
   };
 
   return (
     <div
-      className={clsx(cn.Burger, isBurgerOpen && cn.BurgerOpen)}
+      className={clsx(cn.Burger, isOpen && cn.BurgerOpen)}
       onClick={handleClick}
     >
       <span className={clsx(cn.Line)}></span>
