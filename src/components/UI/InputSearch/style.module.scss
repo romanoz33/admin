@@ -7,8 +7,8 @@
 
   &:focus-within {
     &>button {
-      background-color: #af99ff;
-      outline: 2px solid #af99ff;
+      background-color: $c-input-search;
+      outline: 2px solid $c-input-search;
       transition: outline 0.3s ease, color .3s ease;
     }
   }
@@ -24,7 +24,7 @@
     transition: border .3s ease, color .3s ease;
 
     &:focus {
-      outline: 2px solid #af99ff;
+      outline: 2px solid $c-input-search;
       transition: outline .5s ease, color .3s ease;
     }
 
